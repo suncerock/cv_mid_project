@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from attention_layer import *
+from SETR.attention_layer import TransformerEncoder
 
 class Encoder(nn.Module):
     '''
@@ -52,22 +52,23 @@ class PupDecoder(nn.Module):
             nn.Conv2d(256, 128, kernel_size=1),
             nn.BatchNorm2d(128),
             nn.ReLU(),
-            nn.UpsamplingBilinear2d(scale_factor=2)
+            nn.UpsamplingBilinear2d(scale_factor=2),
             nn.Conv2d(128, 64, kernel_size=1),
             nn.BatchNorm2d(64),
             nn.ReLU(),
-            nn.UpsamplingBilinear2d(scale_factor=2)
+            nn.UpsamplingBilinear2d(scale_factor=2),
             nn.Conv2d(64, 19, kernel_size=1),
             nn.BatchNorm2d(19),
             nn.ReLU(),
             nn.UpsamplingBilinear2d(scale_factor=2)
-,        )
+        )
        
     def forward(self, feature):
         return self.upsample(feature)
         
 class Net(nn.Module):
     def __init__(self, embed_dim):
+        super().__init__()
         self.encoder = Encoder(embed_dim)
         self.decoder = NaiveDecoder(embed_dim)
         
