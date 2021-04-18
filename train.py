@@ -4,10 +4,10 @@ import torch.nn.functional as F
 import torch.utils.data as Data
 import torch.optim as optim
 import numpy as np
-from cityscape_dataset.dataset import Dataset
+from cityscape_dataset import CityscapeDataset
 from config import DefaultConfig
 
-import SETR.model 
+import SETR
 
 import time
 
@@ -17,11 +17,11 @@ def train(epoch_num, batch_size, learning_rate, device, output_path, pretrained_
     config = DefaultConfig()
     torch.backends.cudnn.enabled = False
      
-    Net = SETR.model.Net(19).to(device)
+    Net = SETR.BabyNet().to(device)
     
-    train_data_set = Dataset(config.train_img_root, config.train_target_root, train = True, test = False)
+    train_data_set = CityscapeDataset(config.train_img_root, config.train_target_root, train = True, test = False)
     train_data_loader = Data.DataLoader(dataset=train_data_set, batch_size=batch_size, shuffle=True)
-    val_data_set = Dataset(config.val_img_root, config.val_target_root, train = False, test = False)
+    val_data_set = CityscapeDataset(config.val_img_root, config.val_target_root, train = False, test = False)
     val_data_loader = Data.DataLoader(dataset=val_data_set, batch_size=batch_size, shuffle=True)
     
     best_epoch = 0
@@ -95,8 +95,8 @@ if __name__ == '__main__':
     args = DefaultConfig()
     if args.gpu_index is not None:
         with torch.cuda.device(args.gpu_index):
-            train(args.epoch_num, args.batch_size, args.learning_rate, args.gpu_index, args.output_dir, args.pretrained_model)
+            train(args.epoch_num, args.batch_size, args.learning_rate, args.gpu_index, args.output_path, args.pretrained_model)
     else: 
-        train(args.epoch_num, args.batch_size, args.learning_rate, args.gpu_index, args.output_dir, args.pretrained_model)
+        train(args.epoch_num, args.batch_size, args.learning_rate, args.gpu_index, args.output_path, args.pretrained_model)
         
     

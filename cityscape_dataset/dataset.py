@@ -5,12 +5,13 @@ import torchvision
 import numpy as np
 from PIL import Image
 
-class Dataset(Data.Dataset):
+class CityscapeDataset(Data.Dataset):
     def __init__(self, img_root, target_root, transforms=None, train=True, test = False):
         classes_list =[f'{img_root}/{oneClass}' for oneClass in os.listdir(img_root)]
         self.img = []
         for oneList in classes_list:
             [self.img.append(f'{oneList}/{filename}') for filename in os.listdir(oneList)]
+        self.img = self.img[:50]
 
         classes_list_target =[f'{target_root}/{oneClass}' for oneClass in os.listdir(target_root)]
         self.target = []
@@ -18,7 +19,8 @@ class Dataset(Data.Dataset):
             for filename in os.listdir(oneList):
                 if 'label' in filename:
                     self.target.append(f'{oneList}/{filename}')
-        
+        self.target = self.target[:50]
+
         self.dataset = dict(zip(self.img, self.target))
         
         self.dataset_num = len(self.dataset)
