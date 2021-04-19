@@ -1,3 +1,20 @@
+'''
+Note:
+I've made a babynet for test, including a conv and a relu
+But I have to make some changes to let it run
+please check them!
+I don't know if they are caused by babynet or other error!
+
+1. cross entropy not working!
+ValueError: Expected target size (5, 2048), got torch.Size([5, 1024, 2048])
+I've checked the shape of pred and batch_y
+they are [5, 1024, 2048]
+Then I try MSEloss
+it works!
+
+2. loss.avg can't be understand
+I delete the avg and it works
+'''
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -7,7 +24,7 @@ import numpy as np
 from cityscape_dataset.dataset import CityscapeDataset
 from config import DefaultConfig
 
-from SETR.model import Net
+from SETR import Net, BabyNet
 
 import time
 
@@ -16,8 +33,9 @@ import argparse
 def train(epoch_num, batch_size, learning_rate, device, output_path, pretrained_model):
     config = DefaultConfig()
     torch.backends.cudnn.enabled = False
-     
-    SETRNet = Net(3).to(device)
+
+    SETRNet = BabyNet()
+    # SETRNet = Net(3).to(device)
     
     train_data_set = CityscapeDataset(config.train_img_root, config.train_target_root, train = True, test = False)
     train_data_loader = Data.DataLoader(dataset=train_data_set, batch_size=batch_size, shuffle=True)
@@ -28,6 +46,7 @@ def train(epoch_num, batch_size, learning_rate, device, output_path, pretrained_
     best_mIoU = 0    
     
     CrossEntropyLoss = nn.CrossEntropyLoss()
+    MSEloss = nn.MSELoss()
     opt = optim.Adam(SETRNet.parameters(), lr=learning_rate)
     loss_record = []
     
@@ -39,13 +58,27 @@ def train(epoch_num, batch_size, learning_rate, device, output_path, pretrained_
         for step, (batch_x, batch_y) in enumerate(train_data_loader):
             opt.zero_grad()
             pred = SETRNet(batch_x.to(device))
-            loss = CrossEntropyLoss(batch_y.to(device), pred)
+            pred = pred.squeeze()
+            # print(pred.shape)
+            # print(batch_y.shape)
+            loss = CrossEntropyLoss(batch_y.to(device).float(), pred)
+            # loss = MSEloss(batch_y.float(), pred)
+        
+        '''
+        cross entropy not working
+        MSEloss works
+        '''
+            
         
         loss.backward()
         opt.step()
         train_loss += loss.item()
         loss_record.append(loss.item())
-        log = 'Epoch:{0}\tLoss: {loss.avg:.4f}\t'.format(epoch, loss=train_loss)
+        # log = 'Epoch:{0}\tLoss: {loss.avg:.4f}\t'.format(epoch, loss=train_loss)
+        '''
+        the avg seems not working
+        '''
+        log = 'Epoch:{0}\tLoss: {loss:.4f}\t'.format(epoch, loss=train_loss)
         print(log + '\n')
     # Net.eval()
     # with torch.no_grad():
