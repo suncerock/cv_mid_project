@@ -7,13 +7,13 @@ from PIL import Image
 
 class CityscapeDataset(Data.Dataset):
     def __init__(self, img_root, target_root, transforms=None, train=True, test = False):
-        classes_list =[f'{img_root}/{oneClass}' for oneClass in os.listdir(img_root)]
+        classes_list =[f'{img_root}/{oneClass}' for oneClass in os.listdir(img_root) if not oneClass.startswith('.')]
         self.img = []
         for oneList in classes_list:
-            [self.img.append(f'{oneList}/{filename}') for filename in os.listdir(oneList)]
+            [self.img.append(f'{oneList}/{filename}') for filename in os.listdir(oneList) if not filename.startswith('.')]
         self.img = self.img[:50]
 
-        classes_list_target =[f'{target_root}/{oneClass}' for oneClass in os.listdir(target_root)]
+        classes_list_target =[f'{target_root}/{oneClass}' for oneClass in os.listdir(target_root) if not oneClass.startswith('.')]
         self.target = []
         for oneList in classes_list_target:
             for filename in os.listdir(oneList):

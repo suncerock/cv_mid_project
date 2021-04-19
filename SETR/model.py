@@ -74,4 +74,4 @@ class Net(nn.Module):
         
     def forward(self, img):
         feature, _ = self.encoder(img)
-        return decoder(feature)
+        return self.decoder(feature)
