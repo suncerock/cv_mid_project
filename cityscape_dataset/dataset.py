@@ -32,6 +32,8 @@ class CityscapeDataset(Data.Dataset):
                                      std = [0.229, 0.224, 0.225])
             self.transforms = torchvision.transforms.Compose([torchvision.transforms.ToTensor(),
                                                         normalize])
+        else:
+            self.transforms = transforms
 
     def __getitem__(self, index):
         img_sample = self.transforms(Image.open(self.img[index]))
