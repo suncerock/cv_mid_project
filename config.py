@@ -27,8 +27,6 @@ class DefaultConfig:
     output_path = './pretrained_model/model'
     gpu_index = None
     pretrained_model = './SETR'
-    use_gpu = False
-    device = torch.device('cuda') if use_gpu else 'cpu'
 
 
     def _parse(self, kwargs):
