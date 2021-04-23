@@ -105,9 +105,9 @@ class TransformerEncoderLayer(nn.Module):
         enc_self_attn_mask: [batch_size, src_len, src_len]
         '''
         # enc_outputs: [batch_size, src_len, d_model], attn: [batch_size, n_heads, src_len, src_len]
-        enc_outputs, attn = self.enc_self_attn(enc_inputs, enc_inputs, enc_inputs) # enc_inputs to same Q,K,V
+        enc_outputs, _ = self.enc_self_attn(enc_inputs, enc_inputs, enc_inputs) # enc_inputs to same Q,K,V
         enc_outputs = self.pos_ffn(enc_outputs) # enc_outputs: [batch_size, src_len, d_model]
-        return enc_outputs, attn
+        return enc_outputs
 
     
 class TransformerEncoder(nn.Module):
@@ -120,10 +120,8 @@ class TransformerEncoder(nn.Module):
         enc_inputs: [batch_size, src_len]
         '''
         enc_outputs = enc_inputs
-        enc_self_attns = []
         for layer in self.layers:
             # enc_outputs: [batch_size, src_len, d_model], enc_self_attn: [batch_size, n_heads, src_len, src_len]
-            enc_outputs, enc_self_attn = layer(enc_outputs)
-            enc_self_attns.append(enc_self_attn)
-        return enc_outputs, enc_self_attns
+            enc_outputs = layer(enc_outputs)
+        return enc_outputs
 
