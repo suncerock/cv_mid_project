@@ -32,6 +32,8 @@ def train(
     device = gpu_index
     
     SETRNet = Net(128, 34).to(device)
+    if pretrained_model is not None:
+        SETRNet.load_state_dict(torch.load(pretrained_model))
     
     train_data_set = CityscapeDataset(train_img_root, train_target_root, train=True, test=False)
     train_data_loader = Data.DataLoader(dataset=train_data_set, batch_size=batch_size, shuffle=True)
@@ -85,12 +87,12 @@ def train(
         if mIoU > best_mIoU:
             best_IoU = mIoU
             best_epoch = epoch
-            #torch.save(SETRNet.state_dict(), output_path, _use_new_zipfile_serialization=False)
+            torch.save(SETRNet.state_dict(), output_path)
         print('Best Epoch: ', best_epoch, ' Best mIoU: ', best_mIoU)
         print("Time: {:5.2f}(Total: {:5.2f})".format(time.time() - tick_e, time.time() - tick))
         if torch.cuda.is_available():
             torch.cuda.empty_cache()
-    return SETRNet
+    #return SETRNet
 
 '''
 check the change in config.py
