@@ -58,7 +58,7 @@ class PupDecoder(nn.Module):
         )
         self.upsample3 = nn.Sequential(
             nn.Conv2d(64, num_class, kernel_size=1),
-            nn.BatchNorm2d(19),
+            nn.BatchNorm2d(num_class),
             nn.ReLU(),
             nn.UpsamplingBilinear2d(scale_factor=2)
         )
