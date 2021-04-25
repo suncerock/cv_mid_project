@@ -4,16 +4,19 @@ import torch.nn.functional as F
 import torch.utils.data as Data
 import torch.optim as optim
 import numpy as np
+import torchvision
 
 from cityscape_dataset.dataset import CityscapeDataset
 from config import DefaultConfig
 from evaluate import mean_iou, total_intersect_and_union
 
-from SETR.model import Net
+from SETR import Net, BabyNet
 
 import time
 
 import argparse
+
+from torch.utils.tensorboard import SummaryWriter
 
 def train(
     train_img_root,
@@ -25,26 +28,50 @@ def train(
     learning_rate,
     output_path,
     gpu_index,
-    pretrained_model
+    pretrained_model,
+    writer
     ):
     
     torch.backends.cudnn.enabled = False
     device = gpu_index
     
-    SETRNet = Net(128, 34).to(device)
-    if pretrained_model is not None:
-        SETRNet.load_state_dict(torch.load(pretrained_model))
+    # SETRNet = Net(128, 34).to(device)
+    SETRNet = BabyNet()
+    # if pretrained_model is not None:
+    #     SETRNet.load_state_dict(torch.load(pretrained_model))
     
     train_data_set = CityscapeDataset(train_img_root, train_target_root, train=True, test=False)
     train_data_loader = Data.DataLoader(dataset=train_data_set, batch_size=batch_size, shuffle=True)
     val_data_set = CityscapeDataset(val_img_root, val_target_root, train=False, test=False)
     val_data_loader = Data.DataLoader(dataset=val_data_set, batch_size=batch_size, shuffle=True)
     
+    '''
+    here is the start of tensorboard
+    I load a test image 
+    and the net
+    '''
+    # get some random training images
+    dataiter = iter(train_data_loader)
+    images, labels = dataiter.next()
+
+    # create grid of images
+    img_grid = torchvision.utils.make_grid(images)
+
+    # write to tensorboard
+    writer.add_image('test_image_show', img_grid)
+
+    writer.add_graph(SETRNet, images)
+
+    '''
+    first tensorborad code end here
+    '''
+
     print('Data loaded: {:d} train images and {:d} validation images'.format(len(train_data_set), len(val_data_set)))
     best_epoch = 0
     best_mIoU = 0    
     
-    CrossEntropyLoss = nn.CrossEntropyLoss()
+    # CrossEntropyLoss = nn.CrossEntropyLoss()
+    MSEloss = nn.MSELoss()
     opt = optim.Adam(SETRNet.parameters(), lr=learning_rate)
     loss_record = []
     
@@ -56,17 +83,26 @@ def train(
         for step, (batch_x, batch_y) in enumerate(train_data_loader):
             opt.zero_grad()
             pred = SETRNet(batch_x.to(device))
-            loss = CrossEntropyLoss(pred, batch_y.to(device))
-        
+            # loss = CrossEntropyLoss(pred, batch_y.to(device))
+            loss = MSEloss(pred, batch_y.float())
+
             loss.backward()
             opt.step()
-            train_loss += loss.item()
+            loss += train_loss
             loss_record.append(loss.item())
+
+            '''
+            here is the tensorborad recording the loss during the training
+            '''
+            writer.add_scalar('training loss',
+                                loss / 1000,
+                                epoch * len(train_data_loader) + step)
             
         #log = 'Epoch:{0}\tLoss: {loss.avg:.4f}\t'.format(epoch, loss=train_loss)
         #print(log + '\n')
         train_loss /= step + 1
-
+        
+        
         SETRNet.eval()
         with torch.no_grad():
             total_area_intersect, total_area_union, total_area_pred_label, total_area_label = np.zeros(34), np.zeros(34), np.zeros(34), np.zeros(34)
@@ -87,7 +123,7 @@ def train(
         if mIoU > best_mIoU:
             best_IoU = mIoU
             best_epoch = epoch
-            torch.save(SETRNet.state_dict(), output_path)
+            # torch.save(SETRNet.state_dict(), output_path)
         print('Best Epoch: ', best_epoch, ' Best mIoU: ', best_mIoU)
         print("Time: {:5.2f}(Total: {:5.2f})".format(time.time() - tick_e, time.time() - tick))
         if torch.cuda.is_available():
@@ -123,7 +159,8 @@ def parser():
 '''
 
 if __name__ == '__main__':
-    
+
+    writer = SummaryWriter('D:/PycharmProjects/cv_mid_project/runs/cityscapes_experiment_1')
     args = DefaultConfig()
     if args.gpu_index is not None:
         with torch.cuda.device(args.gpu_index):
@@ -138,6 +175,7 @@ if __name__ == '__main__':
                 args.output_path,
                 args.gpu_index,
                 args.pretrained_model,
+                writer,
             )
     else: 
         train(
@@ -151,6 +189,7 @@ if __name__ == '__main__':
             args.output_path,
             args.gpu_index,
             args.pretrained_model,
+            writer,
         )
         
     
