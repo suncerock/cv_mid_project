@@ -35,8 +35,8 @@ def train(
     torch.backends.cudnn.enabled = False
     device = gpu_index
     
-    # SETRNet = Net(128, 34).to(device)
-    SETRNet = BabyNet()
+    SETRNet = Net(128, 19).to(device)
+    # SETRNet = BabyNet()
     # if pretrained_model is not None:
     #     SETRNet.load_state_dict(torch.load(pretrained_model))
     
@@ -83,8 +83,8 @@ def train(
         for step, (batch_x, batch_y) in enumerate(train_data_loader):
             opt.zero_grad()
             pred = SETRNet(batch_x.to(device))
-            # loss = CrossEntropyLoss(pred, batch_y.to(device))
-            loss = MSEloss(pred, batch_y.float())
+            loss = CrossEntropyLoss(pred, batch_y.to(device))
+            # loss = MSEloss(pred, batch_y.float())
 
             loss.backward()
             opt.step()
@@ -105,11 +105,11 @@ def train(
         
         SETRNet.eval()
         with torch.no_grad():
-            total_area_intersect, total_area_union, total_area_pred_label, total_area_label = np.zeros(34), np.zeros(34), np.zeros(34), np.zeros(34)
+            total_area_intersect, total_area_union, total_area_pred_label, total_area_label = np.zeros(19), np.zeros(19), np.zeros(19), np.zeros(19)
             for step, (batch_x, batch_y) in enumerate(val_data_loader):
                 pred = SETRNet(batch_x.to(device))
                 area_intersect, area_union, area_pred_label, \
-                    area_label = total_intersect_and_union(pred.cpu().numpy().argmax(axis=1), batch_y.numpy(), 34, -1)
+                    area_label = total_intersect_and_union(pred.cpu().numpy().argmax(axis=1), batch_y.numpy(), 19, -1)
                 total_area_intersect += area_intersect
                 total_area_union += area_union
                 total_area_pred_label += area_pred_label
