@@ -1,7 +1,8 @@
 # cv_mid_project
 ***
-## model 
-check our model at [here](https://drive.google.com/file/d/1bki4U2eAfjtUF-Y9K_NNLkZKDvda9_8v/view?usp=sharing)
+## notice (for TA)
+- want to look at the running result? check `train.ipynb`, which is the running result done in google colab.
+- check our model at [google drive here](https://drive.google.com/file/d/1bki4U2eAfjtUF-Y9K_NNLkZKDvda9_8v/view?usp=sharing)
 ***
 Mid-term project of computer vision course.
 
