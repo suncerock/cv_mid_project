@@ -1,4 +1,7 @@
 # cv_mid_project
+
+## notice!!!
+check our model at [here](https://drive.google.com/file/d/1bki4U2eAfjtUF-Y9K_NNLkZKDvda9_8v/view?usp=sharing)
 Mid-term project of computer vision course.
 
 Semantic segmentation on cityscapes datset
