@@ -1,3 +1,3 @@
-from .model import FCN
+from .model import *
 
-__all__ = ['FCN']
+__all__ = ['FCN_ResNet', 'FCN_AlexNet', 'FCN_VGGNet']
