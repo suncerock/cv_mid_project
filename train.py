@@ -1,3 +1,20 @@
+'''
+Note:
+I've made a babynet for test, including a conv and a relu
+But I have to make some changes to let it run
+please check them!
+I don't know if they are caused by babynet or other error!
+
+1. cross entropy not working!
+ValueError: Expected target size (5, 2048), got torch.Size([5, 1024, 2048])
+I've checked the shape of pred and batch_y
+they are [5, 1024, 2048]
+Then I try MSEloss
+it works!
+
+2. loss.avg can't be understand
+I delete the avg and it works
+'''
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
