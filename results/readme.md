@@ -4,7 +4,7 @@
 
 | Model | Pixel Acc. | mIoU | log | model |
 | ------ | :------: | :------: | ------ | ------ | 
-| FCN-AlexNet-8x | 0.86 | 0.36 | [log_FCN] |
+| FCN-AlexNet-8x | 0.86 | 0.36 | [log_FCN_AlexNet_8x_pretrained_backbone_Cityscapes] |
 | FCN-ResNet-8x | 0.92 | 0.55 |
 | FCN-ResNet-16x | 0.91 | 0.54 |
 | FCN-ResNet-32x | 0.91 | 0.55 |
