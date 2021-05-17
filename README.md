@@ -6,13 +6,10 @@
 ***
 Mid-term project of computer vision course.
 
-Semantic segmentation on cityscapes datset
-
-*TO DO:
-1. save model and load pretrained models
-2. don't return the model in train() in train.py
-3. processing visualization
-4. tune the parameters*
-
+Semantic segmentation models
+Including:
+  - FCN (AlexNet/ResNet + 8x/16x/32x decoder)
+  - DeepLab (v1, v2, v3, v3+)
+  - SETR
 
 Collaborators @suncerock @Chameee @milanmarks
