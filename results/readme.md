@@ -14,5 +14,5 @@
 
 | Model | Pixel Acc. | mIoU | log | model |
 | ------ | :------: | :------: | ------ | ------ | 
-| FCN-ResNet-16x | 0.84 | 0.39 | [log](log_FCN_ResNet_16x_pretrained_backbone_VOC) |
-| FCN-ResNet-32x | 0.85 | 0.39 | [log](log_FCN_ResNet_32x_pretrained_backbone_VOC) |
+| FCN-ResNet-16x | 0.84 | 0.39 | [log](log_FCN_ResNet_16x_scratch_VOC) |
+| FCN-ResNet-32x | 0.85 | 0.39 | [log](log_FCN_ResNet_32x_scratch_VOC) |
