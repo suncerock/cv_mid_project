@@ -1,0 +1,613 @@
+nohup: ∫ˆ¬‘ ‰»Î
+Batch size:  16
+Epoch num:  100
+Learning rate:  0.001
+Validation batch size:  16
+Evaluation batch num:  8
+Backbone:  ResNet
+Decoder:  32x
+Dataset:  Cityscapes
+2975 training images in 186 batches
+500 validation images in 32 batches
+Epoch:   1
+------------------ Evaluation ----------------
+Evaluation completed in 19.77s (Epoch: 513.45s	Total: 513.45s)
+Loss = 0.732	Pixelwise accuracy = 0.79	mIoU = 0.21
+Best mIoU: 0.21 in epoch   1
+==============================================
+Epoch:   2
+------------------ Evaluation ----------------
+Evaluation completed in 18.99s (Epoch: 507.54s	Total: 1021.00s)
+Loss = 0.942	Pixelwise accuracy = 0.72	mIoU = 0.20
+Best mIoU: 0.21 in epoch   1
+==============================================
+Epoch:   3
+------------------ Evaluation ----------------
+Evaluation completed in 19.51s (Epoch: 512.44s	Total: 1533.44s)
+Loss = 0.589	Pixelwise accuracy = 0.82	mIoU = 0.27
+Best mIoU: 0.27 in epoch   3
+==============================================
+Epoch:   4
+------------------ Evaluation ----------------
+Evaluation completed in 18.91s (Epoch: 507.70s	Total: 2041.14s)
+Loss = 0.510	Pixelwise accuracy = 0.84	mIoU = 0.29
+Best mIoU: 0.29 in epoch   4
+==============================================
+Epoch:   5
+------------------ Evaluation ----------------
+Evaluation completed in 19.48s (Epoch: 506.49s	Total: 2547.63s)
+Loss = 0.507	Pixelwise accuracy = 0.85	mIoU = 0.31
+Best mIoU: 0.31 in epoch   5
+==============================================
+Epoch:   6
+------------------ Evaluation ----------------
+Evaluation completed in 18.99s (Epoch: 507.91s	Total: 3055.54s)
+Loss = 0.534	Pixelwise accuracy = 0.84	mIoU = 0.29
+Best mIoU: 0.31 in epoch   5
+==============================================
+Epoch:   7
+------------------ Evaluation ----------------
+Evaluation completed in 19.67s (Epoch: 506.09s	Total: 3561.63s)
+Loss = 0.467	Pixelwise accuracy = 0.86	mIoU = 0.32
+Best mIoU: 0.32 in epoch   7
+==============================================
+Epoch:   8
+------------------ Evaluation ----------------
+Evaluation completed in 19.45s (Epoch: 508.50s	Total: 4070.13s)
+Loss = 0.465	Pixelwise accuracy = 0.86	mIoU = 0.32
+Best mIoU: 0.32 in epoch   8
+==============================================
+Epoch:   9
+------------------ Evaluation ----------------
+Evaluation completed in 19.55s (Epoch: 505.11s	Total: 4575.24s)
+Loss = 0.429	Pixelwise accuracy = 0.87	mIoU = 0.34
+Best mIoU: 0.34 in epoch   9
+==============================================
+Epoch:  10
+------------------ Evaluation ----------------
+Evaluation completed in 19.43s (Epoch: 509.18s	Total: 5084.42s)
+Loss = 0.446	Pixelwise accuracy = 0.86	mIoU = 0.36
+Best mIoU: 0.36 in epoch  10
+==============================================
+Epoch:  11
+------------------ Evaluation ----------------
+Evaluation completed in 19.12s (Epoch: 507.15s	Total: 5591.57s)
+Loss = 0.439	Pixelwise accuracy = 0.86	mIoU = 0.35
+Best mIoU: 0.36 in epoch  10
+==============================================
+Epoch:  12
+------------------ Evaluation ----------------
+Evaluation completed in 19.13s (Epoch: 504.40s	Total: 6095.97s)
+Loss = 0.382	Pixelwise accuracy = 0.88	mIoU = 0.36
+Best mIoU: 0.36 in epoch  12
+==============================================
+Epoch:  13
+------------------ Evaluation ----------------
+Evaluation completed in 19.80s (Epoch: 509.59s	Total: 6605.56s)
+Loss = 0.416	Pixelwise accuracy = 0.87	mIoU = 0.36
+Best mIoU: 0.36 in epoch  13
+==============================================
+Epoch:  14
+------------------ Evaluation ----------------
+Evaluation completed in 19.37s (Epoch: 511.22s	Total: 7116.78s)
+Loss = 0.437	Pixelwise accuracy = 0.87	mIoU = 0.34
+Best mIoU: 0.36 in epoch  13
+==============================================
+Epoch:  15
+------------------ Evaluation ----------------
+Evaluation completed in 19.14s (Epoch: 503.71s	Total: 7620.49s)
+Loss = 0.381	Pixelwise accuracy = 0.88	mIoU = 0.38
+Best mIoU: 0.38 in epoch  15
+==============================================
+Epoch:  16
+------------------ Evaluation ----------------
+Evaluation completed in 20.27s (Epoch: 510.99s	Total: 8131.48s)
+Loss = 0.341	Pixelwise accuracy = 0.89	mIoU = 0.38
+Best mIoU: 0.38 in epoch  16
+==============================================
+Epoch:  17
+------------------ Evaluation ----------------
+Evaluation completed in 20.26s (Epoch: 512.39s	Total: 8643.87s)
+Loss = 0.375	Pixelwise accuracy = 0.88	mIoU = 0.38
+Best mIoU: 0.38 in epoch  17
+==============================================
+Epoch:  18
+------------------ Evaluation ----------------
+Evaluation completed in 19.21s (Epoch: 510.87s	Total: 9154.74s)
+Loss = 0.345	Pixelwise accuracy = 0.89	mIoU = 0.41
+Best mIoU: 0.41 in epoch  18
+==============================================
+Epoch:  19
+------------------ Evaluation ----------------
+Evaluation completed in 19.58s (Epoch: 508.70s	Total: 9663.44s)
+Loss = 0.341	Pixelwise accuracy = 0.89	mIoU = 0.43
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  20
+------------------ Evaluation ----------------
+Evaluation completed in 19.43s (Epoch: 513.07s	Total: 10176.51s)
+Loss = 0.378	Pixelwise accuracy = 0.88	mIoU = 0.38
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  21
+------------------ Evaluation ----------------
+Evaluation completed in 19.90s (Epoch: 514.94s	Total: 10691.45s)
+Loss = 0.397	Pixelwise accuracy = 0.87	mIoU = 0.40
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  22
+------------------ Evaluation ----------------
+Evaluation completed in 18.76s (Epoch: 508.27s	Total: 11199.72s)
+Loss = 0.353	Pixelwise accuracy = 0.89	mIoU = 0.42
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  23
+------------------ Evaluation ----------------
+Evaluation completed in 19.95s (Epoch: 509.71s	Total: 11709.44s)
+Loss = 0.351	Pixelwise accuracy = 0.89	mIoU = 0.41
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  24
+------------------ Evaluation ----------------
+Evaluation completed in 19.02s (Epoch: 510.91s	Total: 12220.35s)
+Loss = 0.365	Pixelwise accuracy = 0.88	mIoU = 0.41
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  25
+------------------ Evaluation ----------------
+Evaluation completed in 19.30s (Epoch: 503.89s	Total: 12724.24s)
+Loss = 0.392	Pixelwise accuracy = 0.87	mIoU = 0.37
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  26
+------------------ Evaluation ----------------
+Evaluation completed in 19.08s (Epoch: 510.98s	Total: 13235.22s)
+Loss = 0.333	Pixelwise accuracy = 0.89	mIoU = 0.40
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  27
+------------------ Evaluation ----------------
+Evaluation completed in 19.27s (Epoch: 512.16s	Total: 13747.37s)
+Loss = 0.398	Pixelwise accuracy = 0.87	mIoU = 0.38
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  28
+------------------ Evaluation ----------------
+Evaluation completed in 18.84s (Epoch: 506.65s	Total: 14254.02s)
+Loss = 0.328	Pixelwise accuracy = 0.89	mIoU = 0.42
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  29
+------------------ Evaluation ----------------
+Evaluation completed in 19.26s (Epoch: 506.80s	Total: 14760.82s)
+Loss = 0.389	Pixelwise accuracy = 0.88	mIoU = 0.39
+Best mIoU: 0.43 in epoch  19
+==============================================
+Epoch:  30
+------------------ Evaluation ----------------
+Evaluation completed in 19.97s (Epoch: 512.76s	Total: 15273.58s)
+Loss = 0.378	Pixelwise accuracy = 0.88	mIoU = 0.43
+Best mIoU: 0.43 in epoch  30
+==============================================
+Epoch:  31
+------------------ Evaluation ----------------
+Evaluation completed in 19.56s (Epoch: 513.43s	Total: 15787.02s)
+Loss = 0.315	Pixelwise accuracy = 0.90	mIoU = 0.46
+Best mIoU: 0.46 in epoch  31
+==============================================
+Epoch:  32
+------------------ Evaluation ----------------
+Evaluation completed in 19.37s (Epoch: 511.89s	Total: 16298.91s)
+Loss = 0.307	Pixelwise accuracy = 0.90	mIoU = 0.48
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  33
+------------------ Evaluation ----------------
+Evaluation completed in 19.09s (Epoch: 508.37s	Total: 16807.28s)
+Loss = 0.325	Pixelwise accuracy = 0.90	mIoU = 0.44
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  34
+------------------ Evaluation ----------------
+Evaluation completed in 19.09s (Epoch: 513.43s	Total: 17320.71s)
+Loss = 0.319	Pixelwise accuracy = 0.90	mIoU = 0.44
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  35
+------------------ Evaluation ----------------
+Evaluation completed in 19.74s (Epoch: 507.77s	Total: 17828.49s)
+Loss = 0.338	Pixelwise accuracy = 0.89	mIoU = 0.44
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  36
+------------------ Evaluation ----------------
+Evaluation completed in 19.25s (Epoch: 508.28s	Total: 18336.76s)
+Loss = 0.343	Pixelwise accuracy = 0.89	mIoU = 0.42
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  37
+------------------ Evaluation ----------------
+Evaluation completed in 18.95s (Epoch: 510.07s	Total: 18846.83s)
+Loss = 0.327	Pixelwise accuracy = 0.89	mIoU = 0.45
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  38
+------------------ Evaluation ----------------
+Evaluation completed in 19.15s (Epoch: 510.18s	Total: 19357.01s)
+Loss = 0.378	Pixelwise accuracy = 0.88	mIoU = 0.44
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  39
+------------------ Evaluation ----------------
+Evaluation completed in 19.66s (Epoch: 510.36s	Total: 19867.37s)
+Loss = 0.324	Pixelwise accuracy = 0.89	mIoU = 0.45
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  40
+------------------ Evaluation ----------------
+Evaluation completed in 19.25s (Epoch: 510.25s	Total: 20377.62s)
+Loss = 0.313	Pixelwise accuracy = 0.90	mIoU = 0.47
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  41
+------------------ Evaluation ----------------
+Evaluation completed in 19.71s (Epoch: 513.71s	Total: 20891.33s)
+Loss = 0.333	Pixelwise accuracy = 0.89	mIoU = 0.43
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  42
+------------------ Evaluation ----------------
+Evaluation completed in 19.18s (Epoch: 510.24s	Total: 21401.58s)
+Loss = 0.353	Pixelwise accuracy = 0.89	mIoU = 0.44
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  43
+------------------ Evaluation ----------------
+Evaluation completed in 19.69s (Epoch: 514.38s	Total: 21915.96s)
+Loss = 0.338	Pixelwise accuracy = 0.89	mIoU = 0.45
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  44
+------------------ Evaluation ----------------
+Evaluation completed in 19.10s (Epoch: 508.88s	Total: 22424.84s)
+Loss = 0.326	Pixelwise accuracy = 0.90	mIoU = 0.45
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  45
+------------------ Evaluation ----------------
+Evaluation completed in 19.20s (Epoch: 511.94s	Total: 22936.78s)
+Loss = 0.304	Pixelwise accuracy = 0.90	mIoU = 0.45
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  46
+------------------ Evaluation ----------------
+Evaluation completed in 19.05s (Epoch: 513.42s	Total: 23450.20s)
+Loss = 0.314	Pixelwise accuracy = 0.90	mIoU = 0.43
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  47
+------------------ Evaluation ----------------
+Evaluation completed in 19.04s (Epoch: 512.08s	Total: 23962.28s)
+Loss = 0.299	Pixelwise accuracy = 0.90	mIoU = 0.48
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  48
+------------------ Evaluation ----------------
+Evaluation completed in 18.90s (Epoch: 511.75s	Total: 24474.03s)
+Loss = 0.318	Pixelwise accuracy = 0.90	mIoU = 0.45
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  49
+------------------ Evaluation ----------------
+Evaluation completed in 19.23s (Epoch: 511.13s	Total: 24985.15s)
+Loss = 0.307	Pixelwise accuracy = 0.90	mIoU = 0.44
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  50
+------------------ Evaluation ----------------
+Evaluation completed in 19.38s (Epoch: 503.89s	Total: 25489.04s)
+Loss = 0.321	Pixelwise accuracy = 0.89	mIoU = 0.45
+Best mIoU: 0.48 in epoch  32
+==============================================
+Epoch:  51
+------------------ Evaluation ----------------
+Evaluation completed in 19.81s (Epoch: 510.75s	Total: 25999.79s)
+Loss = 0.296	Pixelwise accuracy = 0.90	mIoU = 0.49
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  52
+------------------ Evaluation ----------------
+Evaluation completed in 19.11s (Epoch: 509.01s	Total: 26508.79s)
+Loss = 0.287	Pixelwise accuracy = 0.91	mIoU = 0.49
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  53
+------------------ Evaluation ----------------
+Evaluation completed in 19.25s (Epoch: 509.75s	Total: 27018.54s)
+Loss = 0.278	Pixelwise accuracy = 0.91	mIoU = 0.47
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  54
+------------------ Evaluation ----------------
+Evaluation completed in 18.72s (Epoch: 508.55s	Total: 27527.09s)
+Loss = 0.284	Pixelwise accuracy = 0.91	mIoU = 0.46
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  55
+------------------ Evaluation ----------------
+Evaluation completed in 19.94s (Epoch: 509.59s	Total: 28036.68s)
+Loss = 0.361	Pixelwise accuracy = 0.88	mIoU = 0.45
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  56
+------------------ Evaluation ----------------
+Evaluation completed in 19.32s (Epoch: 510.70s	Total: 28547.38s)
+Loss = 0.292	Pixelwise accuracy = 0.91	mIoU = 0.47
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  57
+------------------ Evaluation ----------------
+Evaluation completed in 19.74s (Epoch: 512.06s	Total: 29059.45s)
+Loss = 0.306	Pixelwise accuracy = 0.90	mIoU = 0.47
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  58
+------------------ Evaluation ----------------
+Evaluation completed in 18.94s (Epoch: 510.10s	Total: 29569.54s)
+Loss = 0.293	Pixelwise accuracy = 0.90	mIoU = 0.47
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  59
+------------------ Evaluation ----------------
+Evaluation completed in 19.17s (Epoch: 509.59s	Total: 30079.13s)
+Loss = 0.363	Pixelwise accuracy = 0.88	mIoU = 0.43
+Best mIoU: 0.49 in epoch  51
+==============================================
+Epoch:  60
+------------------ Evaluation ----------------
+Evaluation completed in 19.95s (Epoch: 509.88s	Total: 30589.02s)
+Loss = 0.279	Pixelwise accuracy = 0.91	mIoU = 0.50
+Best mIoU: 0.50 in epoch  60
+==============================================
+Epoch:  61
+------------------ Evaluation ----------------
+Evaluation completed in 19.42s (Epoch: 512.90s	Total: 31101.91s)
+Loss = 0.288	Pixelwise accuracy = 0.91	mIoU = 0.48
+Best mIoU: 0.50 in epoch  60
+==============================================
+Epoch:  62
+------------------ Evaluation ----------------
+Evaluation completed in 19.40s (Epoch: 512.55s	Total: 31614.46s)
+Loss = 0.315	Pixelwise accuracy = 0.90	mIoU = 0.43
+Best mIoU: 0.50 in epoch  60
+==============================================
+Epoch:  63
+------------------ Evaluation ----------------
+Evaluation completed in 18.87s (Epoch: 511.88s	Total: 32126.34s)
+Loss = 0.319	Pixelwise accuracy = 0.90	mIoU = 0.48
+Best mIoU: 0.50 in epoch  60
+==============================================
+Epoch:  64
+------------------ Evaluation ----------------
+Evaluation completed in 19.05s (Epoch: 512.30s	Total: 32638.64s)
+Loss = 0.297	Pixelwise accuracy = 0.90	mIoU = 0.50
+Best mIoU: 0.50 in epoch  60
+==============================================
+Epoch:  65
+------------------ Evaluation ----------------
+Evaluation completed in 19.83s (Epoch: 520.23s	Total: 33158.87s)
+Loss = 0.264	Pixelwise accuracy = 0.91	mIoU = 0.49
+Best mIoU: 0.50 in epoch  60
+==============================================
+Epoch:  66
+------------------ Evaluation ----------------
+Evaluation completed in 20.02s (Epoch: 532.15s	Total: 33691.03s)
+Loss = 0.433	Pixelwise accuracy = 0.86	mIoU = 0.39
+Best mIoU: 0.50 in epoch  60
+==============================================
+Epoch:  67
+------------------ Evaluation ----------------
+Evaluation completed in 20.40s (Epoch: 535.68s	Total: 34226.71s)
+Loss = 0.271	Pixelwise accuracy = 0.91	mIoU = 0.51
+Best mIoU: 0.51 in epoch  67
+==============================================
+Epoch:  68
+------------------ Evaluation ----------------
+Evaluation completed in 19.66s (Epoch: 512.22s	Total: 34738.93s)
+Loss = 0.273	Pixelwise accuracy = 0.91	mIoU = 0.49
+Best mIoU: 0.51 in epoch  67
+==============================================
+Epoch:  69
+------------------ Evaluation ----------------
+Evaluation completed in 19.53s (Epoch: 508.98s	Total: 35247.91s)
+Loss = 0.284	Pixelwise accuracy = 0.91	mIoU = 0.54
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  70
+------------------ Evaluation ----------------
+Evaluation completed in 19.17s (Epoch: 513.25s	Total: 35761.16s)
+Loss = 0.284	Pixelwise accuracy = 0.91	mIoU = 0.51
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  71
+------------------ Evaluation ----------------
+Evaluation completed in 19.10s (Epoch: 509.63s	Total: 36270.80s)
+Loss = 0.286	Pixelwise accuracy = 0.91	mIoU = 0.51
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  72
+------------------ Evaluation ----------------
+Evaluation completed in 19.45s (Epoch: 505.33s	Total: 36776.12s)
+Loss = 0.294	Pixelwise accuracy = 0.90	mIoU = 0.51
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  73
+------------------ Evaluation ----------------
+Evaluation completed in 18.84s (Epoch: 510.31s	Total: 37286.44s)
+Loss = 0.295	Pixelwise accuracy = 0.90	mIoU = 0.51
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  74
+------------------ Evaluation ----------------
+Evaluation completed in 19.69s (Epoch: 511.30s	Total: 37797.73s)
+Loss = 0.272	Pixelwise accuracy = 0.91	mIoU = 0.50
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  75
+------------------ Evaluation ----------------
+Evaluation completed in 20.63s (Epoch: 534.81s	Total: 38332.55s)
+Loss = 0.275	Pixelwise accuracy = 0.91	mIoU = 0.49
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  76
+------------------ Evaluation ----------------
+Evaluation completed in 20.63s (Epoch: 559.47s	Total: 38892.01s)
+Loss = 0.268	Pixelwise accuracy = 0.91	mIoU = 0.49
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  77
+------------------ Evaluation ----------------
+Evaluation completed in 21.09s (Epoch: 560.67s	Total: 39452.69s)
+Loss = 0.286	Pixelwise accuracy = 0.91	mIoU = 0.48
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  78
+------------------ Evaluation ----------------
+Evaluation completed in 20.72s (Epoch: 558.79s	Total: 40011.48s)
+Loss = 0.284	Pixelwise accuracy = 0.91	mIoU = 0.45
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  79
+------------------ Evaluation ----------------
+Evaluation completed in 21.33s (Epoch: 561.04s	Total: 40572.52s)
+Loss = 0.359	Pixelwise accuracy = 0.88	mIoU = 0.46
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  80
+------------------ Evaluation ----------------
+Evaluation completed in 20.74s (Epoch: 558.98s	Total: 41131.50s)
+Loss = 0.285	Pixelwise accuracy = 0.90	mIoU = 0.52
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  81
+------------------ Evaluation ----------------
+Evaluation completed in 20.73s (Epoch: 560.72s	Total: 41692.22s)
+Loss = 0.267	Pixelwise accuracy = 0.91	mIoU = 0.52
+Best mIoU: 0.54 in epoch  69
+==============================================
+Epoch:  82
+------------------ Evaluation ----------------
+Evaluation completed in 21.32s (Epoch: 559.19s	Total: 42251.41s)
+Loss = 0.277	Pixelwise accuracy = 0.91	mIoU = 0.55
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  83
+------------------ Evaluation ----------------
+Evaluation completed in 20.75s (Epoch: 558.02s	Total: 42809.43s)
+Loss = 0.293	Pixelwise accuracy = 0.90	mIoU = 0.51
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  84
+------------------ Evaluation ----------------
+Evaluation completed in 20.71s (Epoch: 559.32s	Total: 43368.75s)
+Loss = 0.276	Pixelwise accuracy = 0.91	mIoU = 0.51
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  85
+------------------ Evaluation ----------------
+Evaluation completed in 20.75s (Epoch: 560.15s	Total: 43928.90s)
+Loss = 0.275	Pixelwise accuracy = 0.91	mIoU = 0.49
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  86
+------------------ Evaluation ----------------
+Evaluation completed in 20.89s (Epoch: 559.67s	Total: 44488.57s)
+Loss = 0.265	Pixelwise accuracy = 0.91	mIoU = 0.53
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  87
+------------------ Evaluation ----------------
+Evaluation completed in 20.80s (Epoch: 556.08s	Total: 45044.65s)
+Loss = 0.276	Pixelwise accuracy = 0.91	mIoU = 0.54
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  88
+------------------ Evaluation ----------------
+Evaluation completed in 20.97s (Epoch: 561.62s	Total: 45606.28s)
+Loss = 0.283	Pixelwise accuracy = 0.91	mIoU = 0.49
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  89
+------------------ Evaluation ----------------
+Evaluation completed in 19.44s (Epoch: 523.02s	Total: 46129.30s)
+Loss = 0.277	Pixelwise accuracy = 0.91	mIoU = 0.51
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  90
+------------------ Evaluation ----------------
+Evaluation completed in 19.51s (Epoch: 509.45s	Total: 46638.75s)
+Loss = 0.275	Pixelwise accuracy = 0.91	mIoU = 0.51
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  91
+------------------ Evaluation ----------------
+Evaluation completed in 19.16s (Epoch: 511.63s	Total: 47150.38s)
+Loss = 0.260	Pixelwise accuracy = 0.91	mIoU = 0.52
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  92
+------------------ Evaluation ----------------
+Evaluation completed in 19.12s (Epoch: 509.70s	Total: 47660.08s)
+Loss = 0.263	Pixelwise accuracy = 0.91	mIoU = 0.51
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  93
+------------------ Evaluation ----------------
+Evaluation completed in 19.05s (Epoch: 510.99s	Total: 48171.07s)
+Loss = 0.265	Pixelwise accuracy = 0.91	mIoU = 0.53
+Best mIoU: 0.55 in epoch  82
+==============================================
+Epoch:  94
+------------------ Evaluation ----------------
+Evaluation completed in 19.60s (Epoch: 512.72s	Total: 48683.79s)
+Loss = 0.252	Pixelwise accuracy = 0.92	mIoU = 0.56
+Best mIoU: 0.56 in epoch  94
+==============================================
+Epoch:  95
+------------------ Evaluation ----------------
+Evaluation completed in 19.09s (Epoch: 511.57s	Total: 49195.36s)
+Loss = 0.267	Pixelwise accuracy = 0.91	mIoU = 0.53
+Best mIoU: 0.56 in epoch  94
+==============================================
+Epoch:  96
+------------------ Evaluation ----------------
+Evaluation completed in 20.09s (Epoch: 510.66s	Total: 49706.03s)
+Loss = 0.270	Pixelwise accuracy = 0.91	mIoU = 0.57
+Best mIoU: 0.57 in epoch  96
+==============================================
+Epoch:  97
+------------------ Evaluation ----------------
+Evaluation completed in 19.63s (Epoch: 513.65s	Total: 50219.67s)
+Loss = 0.249	Pixelwise accuracy = 0.92	mIoU = 0.54
+Best mIoU: 0.57 in epoch  96
+==============================================
+Epoch:  98
+------------------ Evaluation ----------------
+Evaluation completed in 19.13s (Epoch: 512.37s	Total: 50732.04s)
+Loss = 0.270	Pixelwise accuracy = 0.91	mIoU = 0.53
+Best mIoU: 0.57 in epoch  96
+==============================================
+Epoch:  99
+------------------ Evaluation ----------------
+Evaluation completed in 19.00s (Epoch: 516.40s	Total: 51248.44s)
+Loss = 0.259	Pixelwise accuracy = 0.91	mIoU = 0.53
+Best mIoU: 0.57 in epoch  96
+==============================================
+Epoch: 100
+------------------ Evaluation ----------------
+Evaluation completed in 19.26s (Epoch: 512.41s	Total: 51760.85s)
+Loss = 0.251	Pixelwise accuracy = 0.92	mIoU = 0.55
+Best mIoU: 0.57 in epoch  96
+==============================================
+Evaluation completed in 74.94s
+Pixelwise accuracy = 0.91	mIoU = 0.54
