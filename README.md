@@ -6,10 +6,11 @@
 ***
 Mid-term project of computer vision course.
 
-Semantic segmentation models
-Including:
+Semantic segmentation models including:
   - FCN (AlexNet/ResNet + 8x/16x/32x decoder)
   - DeepLab (v1, v2, v3, v3+)
   - SETR
+
+Trained and evaluated on Cityscapes and Pascal VOC2012
 
 Collaborators @suncerock @Chameee @milanmarks
